@@ -1,0 +1,12 @@
+list=["4","2","6"]
+print(list)
+list.remove("4")
+print(list)
+list.append("1")
+print(list)
+list.sort()
+print(list)
+list.pop(0)
+print(list)
+list.reverse()
+print(list)

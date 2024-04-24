@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Academic Calendar & Reminder System</title>
+<link rel="stylesheet" href="login.css">
+</head>
+<body>
+<form id="reminder-form">
+<h2>Academic Calendar & Reminder System</h2>
+<label for="event">Event</label>
+<input type="text" class="box" placeholder="Enter Event Name" id="event" name="event" required>
+<label for="date">Date</label>
+<input type="date" class="box" id="date" name="date" required>
+<label for="description">Description</label>
+<textarea class="box" placeholder="Enter Description" id="description" name="description"></textarea>
+ 
+<button type="button" id="show-pass">Show Details</button> <input type="submit" id="submit-btn" value="Set Reminder" disabled> <div class="msg"></div>
+</form>
+
+
+<script>
+var reminderForm = document.getElementById('reminder-form');
+var eventInput = document.getElementById('event'); 
+var dateInput = document.getElementById('date');
+var descriptionInput = document.getElementById('description');
+var submitButton = document.getElementById('submit-btn');
+var showDetailsButton = document.getElementById('show-pass');
+var msgElement = document.querySelector('.msg');
+
+var validEvent = false, validDate = false;
+
+eventInput.addEventListener('input', onEventInput);
+dateInput.addEventListener('input', onDateInput);
+reminderForm.addEventListener('submit', onSubmit);
+
+
+function onEventInput(event) {
+  validEvent = event.target.value.length > 0;
+  checkValidity();
+}
+
+function onDateInput(event) {
+  validDate = event.target.value !== '';
+  checkValidity();
+}
+
+function checkValidity() {
+  submitButton.disabled = !(validEvent && validDate);
+}
+
+function toggleDetails() {
+  var descriptionVisibility = descriptionInput.style.display;
+  descriptionInput.style.display = descriptionVisibility === 'none' ? 'block' : 'none';
+  showDetailsButton.textContent = descriptionVisibility === 'none' ? 'Hide Details' : 'Show Details';
+}
+
+function onSubmit(e) {
+  e.preventDefault();
+  var event = eventInput.value;
+  var date = dateInput.value;
+  var description = descriptionInput.value;
+
+  // Here you can add code to store the event details in your system
+
+  msgElement.textContent = 'Reminder Set Successfully!';
+  setTimeout(function() {
+    msgElement.textContent = '';
+  }, 2000);
+}
+</script>
+</body>
+</html>
