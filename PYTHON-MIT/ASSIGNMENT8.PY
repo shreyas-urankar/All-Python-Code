@@ -29,26 +29,6 @@ for name, marks in student_info:
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 # def read_student_data():
 #     num_student = int(input("How many students are there? "))
 #     while num_student < 3:
@@ -68,3 +48,24 @@ for name, marks in student_info:
 # print("\nName \t Marks ")
 # for name, marks in student_data:
 #     print(name, "\t", marks)
+
+
+# def read_students_data():
+#     num_student=int(input("Enter the number of students:-"))
+#     student_info=[]
+#     if(num_student<3):
+#         print("Enter minimum 3 students name.")
+#     num_student=int(input("Enter the number of students:-"))
+
+#     student_data=[]
+#     for i in range(num_student):
+#         name=input(f"Enter the name of student{i+1}:-")
+#         marks=float(input(f"Enter the toatal marks by {name}:-"))
+#         student_info.append(name,marks)
+
+#     return student_data
+# student_data = read_students_data()
+
+# print("\nName \t Marks")
+# for name,marks in student_data:
+#     print(f"{name.ljust(15)} {marks}")
