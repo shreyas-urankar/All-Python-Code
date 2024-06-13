@@ -1,5 +1,0 @@
-dec_num=int(input("Enter a decimal number:"))
-print(f"The decimal value of {dec_num} is:")
-print(f"{bin(dec_num)} in binary. ")
-print(f"{oct(dec_num)} in octal. ")
-print(f"{hex(dec_num)} in hexadecimal. ")
