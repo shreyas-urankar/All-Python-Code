@@ -1,1 +1,0 @@
-print("Twinkel twinkel little star.")
