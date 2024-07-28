@@ -1,3 +1,5 @@
+#Write a Python program that allows the user to play Rock, Paper, Scissors against the computer, displaying ASCII art for each choice and determining the winner.
+
 import random
 
 rock = """

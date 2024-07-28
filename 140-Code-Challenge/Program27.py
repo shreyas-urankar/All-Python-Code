@@ -1,3 +1,6 @@
+#Write a Python program that simulates a rollercoaster ticketing system, where the user inputs their height and age to determine eligibility and ticket price, and optionally adds a photograph to the final bill.
+
+
 print("Welcome to the rollercoaster!")
 bill=0
 height = int(input("Enter your height:- "))
