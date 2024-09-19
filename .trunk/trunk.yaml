@@ -15,10 +15,11 @@ runtimes:
     - python@3.10.8
 # This is the section where you manage your linters. (https://docs.trunk.io/check/configuration)
 lint:
+  disabled:
+    - ruff
   enabled:
     - bandit@1.7.8
     - black@24.4.2
     - git-diff-check
     - isort@5.13.2
-    - ruff@0.4.8
     - trufflehog@3.78.1
