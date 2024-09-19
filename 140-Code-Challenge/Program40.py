@@ -10,4 +10,4 @@ for num in range(1, 101):
         happy_numbers.append(num)
 
 print("Happy numbers between 1 to 100:")
-print(happy_numbersC)
+print(happy_numbers)
